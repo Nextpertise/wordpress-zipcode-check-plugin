@@ -45,8 +45,7 @@ class WordpessZipcheck {
 
         // Enqueue JS
         add_action( 'wp_enqueue_scripts', function() {
-//            wp_enqueue_script('nextperise_zipcheck_js', 'https://cdn.jsdelivr.net/gh/Nextpertise/js-module-zipcheck/dist/js/app.js', [], '1.0.0');
-            wp_enqueue_script('nextperise_zipcheck_js', 'https://js-module-zipcheck.ddev.site/dist/js/app.js', [], '1.0.0');
+            wp_enqueue_script('nextperise_zipcheck_js', 'https://cdn.jsdelivr.net/gh/Nextpertise/js-zipcode-check-plugin/js/app.js', [], '1.0.0');
         } );
 
         $this->add_shortcode();
