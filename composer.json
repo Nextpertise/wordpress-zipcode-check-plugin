@@ -1,0 +1,12 @@
+{
+  "name": "Nextpertise/wordpress-zipcheck",
+  "authors": [
+    {
+      "name": "Len van Essen",
+      "email": "len@wndr.digital"
+    }
+  ],
+  "require": {
+    "woocommerce/woocommerce-sniffs": "^0.1.0"
+  }
+}
