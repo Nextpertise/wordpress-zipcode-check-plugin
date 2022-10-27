@@ -2,7 +2,7 @@
 The Nextpertise Wordpress Zipcheck plug-in is a plug-in that allows you to embed [Nextpertise's zipchecker](https://nextpertise.nl/postcode-check/) in your website, without coding.
 
 ## Installation
-You can download a ZIP version of the plugin here. This ZIP can be uploaded to your WordPress installation (WP Admin -> Plugins -> Add New -> Upload Plugin). After installing the plugin, don't forget to enable it on the plugins page!
+You can download a [ZIP version of the plugin here](https://github.com/Nextpertise/wordpress-zipcode-check-plugin/archive/refs/heads/master.zip). This ZIP can be uploaded to your WordPress installation (WP Admin -> Plugins -> Add New -> Upload Plugin). After installing the plugin, don't forget to enable it on the plugins page!
 
 ## Configuration
 You'll have a couple of options to configure the zipcheck plugin. You'll find them in WordPress under Zipcheck Settings.
