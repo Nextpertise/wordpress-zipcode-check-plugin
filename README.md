@@ -18,5 +18,5 @@ If you're upgrading from the old plug-in, there are two notable changes for you 
 2) Previously you'd have to create your own address form. The new plug-in takes care of this for you. If you've had the form on the same page, please remove the old address form. If it's on a different page, you might as well leave it there as url-parameters will still work on the new plug-in
 
 # Development notes
-If you'd like to load the source for the zipcode from any other destination then the CDN, you can set define a constant named `ZIPCHECK_JS_URI`. This is usefull for instance when you develop locally, or want tot temporarily bypass the CDN cache.
-define('ZIPCHECK_JS_URI', 'https://raw.githubusercontent.com/Nextpertise/js-zipcode-check-plugin/main/dist/js/app.js');
+If you'd like to load the source for the zipcode from any other destination then the CDN, you can set define a constant named `ZIPCHECK_JS_URI`. This is usefull for instance when you develop locally, or want tot temporarily bypass the CDN cache. Put the following line in your `wp-config.php`
+`define('ZIPCHECK_JS_URI', 'https://raw.githubusercontent.com/Nextpertise/js-zipcode-check-plugin/main/dist/js/app.js');`
