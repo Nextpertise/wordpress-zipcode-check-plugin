@@ -43,9 +43,15 @@ class WordpessZipcheck {
         // Add an optional settings validation filter (recommended).
         add_filter( $this->wpsf->get_option_group() . '_settings_validate', array( &$this, 'validate_settings' ) );
 
+        // Define CDN url
+        defined( 'ZIPCHECK_JS_URI' ) || define( 'ZIPCHECK_JS_URI', 'https://cdn.jsdelivr.net/gh/Nextpertise/js-zipcode-check-plugin@main/dist/js/app.js' );
+
         // Enqueue JS
         add_action( 'wp_enqueue_scripts', function() {
-            wp_enqueue_script('nextperise_zipcheck_js', 'https://cdn.jsdelivr.net/gh/Nextpertise/js-zipcode-check-plugin/js/app.js', [], '1.0.0');
+            wp_enqueue_script(
+                'nextperise_zipcheck_js',
+                ZIPCHECK_JS_URI
+                , [], '1.0.0');
         } );
 
         $this->add_shortcode();

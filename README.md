@@ -16,3 +16,7 @@ You'll have a couple of options to configure the zipcheck plugin. You'll find th
 If you're upgrading from the old plug-in, there are two notable changes for you to take into account.
 1) The authentication method has changed, previously you would authenticate using your username and password. Your password **is not** the same as your token. Please do not enter your password as an api token, **it will be exposed**. You should request a new token from Nextpertise.
 2) Previously you'd have to create your own address form. The new plug-in takes care of this for you. If you've had the form on the same page, please remove the old address form. If it's on a different page, you might as well leave it there as url-parameters will still work on the new plug-in
+
+# Development notes
+If you'd like to load the source for the zipcode from any other destination then the CDN, you can set define a constant named `ZIPCHECK_JS_URI`. This is usefull for instance when you develop locally, or want tot temporarily bypass the CDN cache.
+define('ZIPCHECK_JS_URI', 'https://raw.githubusercontent.com/Nextpertise/js-zipcode-check-plugin/main/dist/js/app.js');
