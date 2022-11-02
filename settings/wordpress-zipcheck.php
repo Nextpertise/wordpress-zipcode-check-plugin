@@ -84,9 +84,15 @@ function nextpertise_zipcheck_layout( $wpsf_settings ) {
                 'title'   => 'Input Border Top Color',
                 'desc'    => 'This color is used for the top border on form fields. You can leave it empty if you don\'t want this.',
                 'type'    => 'color',
-                'default' => '#fff',
+                'default' => '#D3E7F3',
             ),
-
+            array(
+                'id'      => 'button_effect',
+                'title'   => 'Button Effect',
+                'desc'    => 'Enable the Nextpertise effect on the buttons',
+                'type'    => 'checkbox',
+                'default' => false,
+            ),
         )
     );
     return $wpsf_settings;

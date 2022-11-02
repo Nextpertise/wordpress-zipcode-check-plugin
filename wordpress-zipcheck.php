@@ -44,7 +44,7 @@ class WordpessZipcheck {
         add_filter( $this->wpsf->get_option_group() . '_settings_validate', array( &$this, 'validate_settings' ) );
 
         // Define CDN url
-        defined( 'ZIPCHECK_JS_URI' ) || define( 'ZIPCHECK_JS_URI', 'https://cdn.jsdelivr.net/gh/Nextpertise/js-zipcode-check-plugin@main/dist/js/app.js' );
+        defined( 'ZIPCHECK_JS_URI' ) || define( 'ZIPCHECK_JS_URI', 'https://cdn.jsdelivr.net/gh/Nextpertise/js-zipcode-check-plugin/dist/js/app.js' );
 
         // Enqueue JS
         add_action( 'wp_enqueue_scripts', function() {
@@ -102,14 +102,16 @@ class WordpessZipcheck {
             $background_color = wpsf_get_setting('nextpertise', 'layout', 'background_color');
             $input_border_top_color = wpsf_get_setting('nextpertise', 'layout', 'input_border_top_color');
             $input_background_color = wpsf_get_setting('nextpertise', 'layout', 'input_background_color');
+            $button_effect = wpsf_get_setting('nextpertise', 'layout', 'button_effect');
             $redirect = isset($args['redirect']) ? $args['redirect'] : null;
-            echo "<nextpertise-zipcheck 
+            return "<nextpertise-zipcheck 
                 primary-color='$primary_color'
                 secondary-color='$secondary_color' 
                 background-color='$background_color'
                 token='$token'
                 input-border-top-color='$input_border_top_color' 
                 input-background-color='$input_background_color'
+                ". ($button_effect ? "button-effect" : '')." 
                 redirect='$redirect'
                 ></nextpertise-zipcheck>";
         });
